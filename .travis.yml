@@ -20,7 +20,7 @@ install:
 
 # Command to run tests, e.g. python setup.py test
 script:
-  - coverage run --source=jeaves manage.py test
+  - coverage run --source=jeaves django-admin.py test --settings=test_settings
 
 # Exclude combinations like this
 #matrix:
