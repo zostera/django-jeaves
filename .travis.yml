@@ -1,7 +1,4 @@
-# We do not use sudo
 sudo: false
-
-# Python versions for matrix
 language: python
 python:
   - "2.7"
@@ -9,25 +6,12 @@ python:
   - "3.5"
   - "3.6"
 
-# Django versions for matrix
-env:
-  - DJANGO_VERSION='>=1.11,<1.12'
-
-# Command to install dependencies, e.g. pip install -r requirements.txt
 install:
-  - pip install Django$DJANGO_VERSION
+  - pip install tox-travis
   - pip install coveralls
 
-# Command to run tests, e.g. python setup.py test
 script:
-  - coverage run --source=jeaves django-admin.py test --settings=test_settings
+  - coverage run tox
 
-# Exclude combinations like this
-#matrix:
-#  exclude:
-#    - python: "3.3"
-#      env: DJANGO_VERSION='>=1.10,<1.11'
-
-# Report to coveralls
 after_success:
   - coveralls
