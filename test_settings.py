@@ -1,5 +1,5 @@
 INSTALLED_APPS = (
-    'myapp',
+    'jeaves',
 )
 DATABASES = {
     'default': {
@@ -7,4 +7,4 @@ DATABASES = {
         'NAME': ':memory:',
     }
 }
-SECRET_KEY = "secret_key_for_testing"
+SECRET_KEY = 'There_is_too_much_butter_on_those_trays'
