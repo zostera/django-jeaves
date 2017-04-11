@@ -7,10 +7,7 @@ python:
   - "3.6"
 
 install:
-  - pip install tox tox-travis coverage coveralls
+  - pip install tox tox-travis
 
 script:
-  - coverage run --source=jeaves tox
-
-after_success:
-  - coveralls
+  - tox
