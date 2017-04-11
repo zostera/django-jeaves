@@ -1,15 +1,12 @@
 import os
-import jeaves
 from setuptools import setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 
-version = jeaves.__version__
-
 setup(
     name='django-jeaves',
-    version=version,
+    version='0.1',
     packages=['jeaves'],
     description='Django EAV using JSONField',
     long_description=README,
