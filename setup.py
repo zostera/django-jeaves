@@ -1,8 +1,18 @@
 import os
+import sys
+
 from setuptools import setup
 
-here = os.path.abspath(os.path.dirname(__file__))
-README = open(os.path.join(here, 'README.rst')).read()
+DIR = os.path.abspath(os.path.dirname(__file__))
+README = open(os.path.join(DIR, 'README.rst')).read()
+
+cmd = sys.argv[-1]
+
+if cmd == 'test':
+    print("Running tests only on current environment.")
+    print("Use `tox` for testing multiple environments.")
+    os.system('django-admin.py test')
+    sys.exit()
 
 setup(
     name='django-jeaves',
