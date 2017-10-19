@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
-
-# The version of this package
 __version__ = '0.1.0'
+
+default_app_config = 'jeaves.apps.JeavesConfig'
